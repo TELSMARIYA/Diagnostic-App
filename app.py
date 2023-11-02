@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import pickle
 from sklearn.ensemble import RandomForestClassifier
 st.set_option('deprecation.showPyplotGlobalUse', False)
@@ -12,10 +12,10 @@ df=pd.read_csv(r'diabetes.csv')
 
 if st.sidebar.checkbox('View Data', False):
     st.write(df)
-if st.sidebar.checkbox('View Distributions', False):
-    df.hist()
-    plt.tight_layout()
-    st.pyplot()
+#if st.sidebar.checkbox('View Distributions', False):
+    #df.hist()
+   # plt.tight_layout()
+    #st.pyplot()
     
 # step 1 : load the pickled model
 model=open('rfc.pickle','rb')
